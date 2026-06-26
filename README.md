@@ -1,20 +1,19 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# ☕ Bloom Café - Landing Page
 
-# Run and deploy your AI Studio app
+A highly polished, responsive, component-driven single-page landing website built for a fictional coffee shop to showcase modern frontend deployment standards.
 
-This contains everything you need to run your app locally.
+## 🚀 Tech Stack
+- **Framework:** React (Vite setup)
+- **Styling:** Tailwind CSS (Custom Theme Configuration)
+- **Icons:** React Icons (`hi` and `fi` packages)
 
-View your app in AI Studio: https://ai.studio/apps/eb71c002-361b-45d1-b36d-f6f7971e6dcc
+## 🛠️ Key Features Included
+- **Sticky Fluid Navbar:** Integrated with smooth section-scrolling and a mobile hamburger menu layout.
+- **Dynamic Content Sections:** Hero section, semantic About grid, elegant 6-item Menu layout with hover transitions, interactive Star-rated Testimonials, and styled modern Contact forms.
+- **Custom Visual Branding:** Maps explicitly to an authentic coffee-themed palette (`#8B5E3C`, `#FFFDF8`, `#D4A373`).
 
-## Run Locally
+## 📦 Getting Started
 
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+1. Clone the project:
+   ```bash
+   git clone [https://github.com/YOUR_USERNAME/bloom-cafe-landing-page.git](https://github.com/YOUR_USERNAME/bloom-cafe-landing-page.git)
