@@ -13,27 +13,27 @@ export default function Testimonials() {
   const testimonials: Testimonial[] = [
     {
       id: 1,
-      name: "Liam Thompson",
+      name: "Amadu Kamara",
       role: "Coffee Aficionado",
       rating: 5,
       feedback: "The Lavender Honey Latte is absolutely life-changing. Easily the best specialty coffee shop in the city! The staff is so welcoming and the atmosphere is serene and perfect for reading or quiet contemplation.",
-      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=150",
+      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150",
     },
     {
       id: 2,
-      name: "Sophia Rodriguez",
+      name: "Fatmata Dumbuya",
       role: "Freelance Designer",
       rating: 5,
       feedback: "Bloom Café is my ultimate remote workspace. The high-speed fiber internet is incredibly fast, and their freshly baked pistachio croissant is out of this world. It is clean, spacious, and filled with plants.",
-      avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150",
+      avatar: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&q=80&w=150",
     },
     {
       id: 3,
-      name: "Emily Chen",
+      name: "Sahr Mansaray",
       role: "Local Writer",
       rating: 5,
       feedback: "A beautiful neighborhood sanctuary! Their cold brew nitro pours like a draught beer and has an unbelievably smooth finish. You can really tell they care deeply about roasting single-origin beans.",
-      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=150",
+      avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=150",
     },
   ];
 

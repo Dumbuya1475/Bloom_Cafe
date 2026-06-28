@@ -8,6 +8,7 @@ import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import BookingModal from "./components/BookingModal";
+import ScrollToTop from "./components/ScrollToTop";
 
 export default function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -61,6 +62,9 @@ export default function App() {
 
       {/* Booking Table Overlay Modal */}
       <BookingModal isOpen={isModalOpen} onClose={handleCloseModal} />
+
+      {/* Floating Scroll To Top Button */}
+      <ScrollToTop />
     </div>
   );
 }
