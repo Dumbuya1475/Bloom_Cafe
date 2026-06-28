@@ -1,5 +1,6 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Coffee, Tag, Sparkles } from "lucide-react";
+import { motion } from "motion/react";
 
 interface MenuItem {
   id: number;
@@ -75,7 +76,13 @@ export default function Menu() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header Title */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="text-center max-w-2xl mx-auto mb-16"
+        >
           <span className="text-coffee-primary font-display font-semibold text-sm tracking-wider uppercase block mb-2">
             The Menu
           </span>
@@ -85,7 +92,7 @@ export default function Menu() {
           <p className="font-sans text-coffee-dark/60 text-sm sm:text-base">
             Every cup and bite is prepared with high culinary precision using local, organic ingredients sourced sustainably.
           </p>
-        </div>
+        </motion.div>
 
         {/* Filter Controls */}
         <div className="flex justify-center gap-4 mb-12">

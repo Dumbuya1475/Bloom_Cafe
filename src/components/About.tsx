@@ -1,4 +1,6 @@
+import React from "react";
 import { Heart, Globe, Award } from "lucide-react";
+import { motion } from "motion/react";
 
 export default function About() {
   return (
@@ -38,14 +40,20 @@ export default function About() {
           {/* Right Column: Warm, inviting Story Content */}
           <div className="order-1 lg:order-2 flex flex-col justify-center">
             {/* Header section */}
-            <div className="mb-6">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="mb-6"
+            >
               <span className="text-coffee-primary font-display font-semibold text-sm tracking-wider uppercase block mb-2">
                 Our Heritage
               </span>
               <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-coffee-dark tracking-tight leading-tight">
                 Crafting Exceptional Moments, One Cup at a Time
               </h2>
-            </div>
+            </motion.div>
 
             {/* Paragraphs */}
             <div className="space-y-4 text-coffee-dark/80 font-sans text-base leading-relaxed">

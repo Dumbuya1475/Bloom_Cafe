@@ -1,4 +1,6 @@
+import React from "react";
 import { Star, Quote } from "lucide-react";
+import { motion } from "motion/react";
 
 interface Testimonial {
   id: number;
@@ -42,14 +44,20 @@ export default function Testimonials() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="text-center max-w-2xl mx-auto mb-16"
+        >
           <span className="text-coffee-primary font-display font-semibold text-sm tracking-wider uppercase block mb-2">
             Reviews
           </span>
           <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-coffee-dark tracking-tight leading-tight">
             Loved by Our Community
           </h2>
-        </div>
+        </motion.div>
 
         {/* Testimonials Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
