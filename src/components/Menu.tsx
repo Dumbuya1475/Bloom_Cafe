@@ -21,7 +21,7 @@ export default function Menu() {
       category: "coffee",
       description: "A concentrated, bold double shot of our house roast. Notes of rich cocoa, dark cherry, and a sweet velvety finish.",
       price: "$4.00",
-      image: "https://images.unsplash.com/photo-1510972527409-cef190317417?auto=format&fit=crop&q=80&w=600",
+      image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=600",
       tag: "Popular",
     },
     {
