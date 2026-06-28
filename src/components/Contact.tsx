@@ -75,9 +75,9 @@ export default function Contact() {
                   <div>
                     <h4 className="font-display font-bold text-white text-base">Our Address</h4>
                     <p className="font-sans text-sm text-white/75 mt-1 leading-relaxed">
-                      128 Bloom Alley, Coffee District
+                      15 Wilkinson Road, Lumley
                       <br />
-                      New York, NY 10012
+                      Freetown, Sierra Leone
                     </p>
                   </div>
                 </div>
@@ -89,7 +89,7 @@ export default function Contact() {
                   <div>
                     <h4 className="font-display font-bold text-white text-base">Phone Number</h4>
                     <p className="font-sans text-sm text-white/75 mt-1">
-                      +1 (555) 321-7890
+                      +232 76 543 210
                     </p>
                   </div>
                 </div>
@@ -232,7 +232,7 @@ export default function Contact() {
               </div>
               <div className="text-left">
                 <p className="font-display font-bold text-xs text-coffee-dark">Bloom Café HQ</p>
-                <p className="font-sans text-[11px] text-coffee-dark/60 truncate">128 Bloom Alley, Coffee District, NY</p>
+                <p className="font-sans text-[11px] text-coffee-dark/60 truncate">15 Wilkinson Road, Freetown, SL</p>
               </div>
             </div>
 
