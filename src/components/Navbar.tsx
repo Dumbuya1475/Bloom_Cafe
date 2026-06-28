@@ -72,7 +72,9 @@ export default function Navbar({ onBookClick }: NavbarProps) {
             <div className="bg-coffee-primary text-coffee-cream p-2 rounded-full shadow-inner">
               <Coffee className="h-6 w-6" />
             </div>
-            <span className="font-display font-bold text-2xl tracking-tight text-coffee-primary">
+            <span className={`font-display font-bold text-2xl tracking-tight transition-colors duration-300 ${
+              isScrolled ? "text-coffee-primary" : "text-coffee-cream"
+            }`}>
               Bloom Café
             </span>
           </div>
@@ -91,13 +93,19 @@ export default function Navbar({ onBookClick }: NavbarProps) {
                   }}
                   className={`relative font-medium text-sm transition-colors duration-200 py-2 ${
                     isActive
-                      ? "text-coffee-primary font-semibold"
-                      : "text-coffee-dark/70 hover:text-coffee-primary"
+                      ? isScrolled
+                        ? "text-coffee-primary font-semibold"
+                        : "text-coffee-accent font-semibold"
+                      : isScrolled
+                        ? "text-coffee-dark/70 hover:text-coffee-primary"
+                        : "text-white/80 hover:text-white"
                   }`}
                 >
                   {link.name}
                   {isActive && (
-                    <span className="absolute bottom-0 left-0 w-full h-0.5 bg-coffee-primary rounded-full" />
+                    <span className={`absolute bottom-0 left-0 w-full h-0.5 rounded-full ${
+                      isScrolled ? "bg-coffee-primary" : "bg-coffee-accent"
+                    }`} />
                   )}
                 </a>
               );
@@ -109,7 +117,11 @@ export default function Navbar({ onBookClick }: NavbarProps) {
             <button
               id="nav-book-btn"
               onClick={onBookClick}
-              className="bg-coffee-primary text-white hover:bg-coffee-primary/90 px-5 py-2.5 rounded-full font-display font-medium text-sm shadow-sm transition-all duration-200 transform hover:-translate-y-0.5"
+              className={`px-5 py-2.5 rounded-full font-display font-medium text-sm shadow-sm transition-all duration-200 transform hover:-translate-y-0.5 ${
+                isScrolled
+                  ? "bg-coffee-primary text-white hover:bg-coffee-primary/90"
+                  : "bg-coffee-cream text-coffee-dark hover:bg-white"
+              }`}
             >
               Book Table
             </button>
@@ -120,7 +132,11 @@ export default function Navbar({ onBookClick }: NavbarProps) {
             <button
               id="hamburger-btn"
               onClick={() => setIsOpen(!isOpen)}
-              className="text-coffee-dark/80 hover:text-coffee-primary p-2 focus:outline-none"
+              className={`p-2 focus:outline-none transition-colors duration-200 ${
+                isScrolled
+                  ? "text-coffee-dark/80 hover:text-coffee-primary"
+                  : "text-white hover:text-coffee-accent"
+              }`}
               aria-label="Toggle Menu"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
