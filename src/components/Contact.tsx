@@ -212,6 +212,74 @@ export default function Contact() {
           </div>
 
         </div>
+
+        {/* Visual Map Placeholder */}
+        <div className="mt-16 bg-white rounded-3xl overflow-hidden border border-coffee-accent/10 shadow-sm p-4">
+          <div className="relative h-96 w-full rounded-2xl overflow-hidden group">
+            {/* Map background image */}
+            <img
+              src="https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?auto=format&fit=crop&q=80&w=1200"
+              alt="Bloom Café Location Map"
+              className="w-full h-full object-cover filter brightness-[0.9] contrast-[1.1] transition-transform duration-700 group-hover:scale-[1.02]"
+              referrerPolicy="no-referrer"
+            />
+            
+            {/* Dark glass overlay map controls / elements */}
+            {/* Search Box */}
+            <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-2xl shadow-lg border border-coffee-accent/10 flex items-center gap-2.5 max-w-xs sm:max-w-sm">
+              <div className="bg-coffee-primary text-white p-1.5 rounded-lg">
+                <MapPin className="h-4 w-4" />
+              </div>
+              <div className="text-left">
+                <p className="font-display font-bold text-xs text-coffee-dark">Bloom Café HQ</p>
+                <p className="font-sans text-[11px] text-coffee-dark/60 truncate">128 Bloom Alley, Coffee District, NY</p>
+              </div>
+            </div>
+
+            {/* Pulsing Pin in Center */}
+            <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+              <div className="relative flex flex-col items-center">
+                {/* Info Card above pin */}
+                <div className="bg-coffee-dark text-white px-3.5 py-2 rounded-xl shadow-xl text-center border border-white/10 mb-2 transform -translate-y-1 flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                  <span className="font-display font-semibold text-xs tracking-wide">We are open!</span>
+                </div>
+                {/* Pin shadow pulse */}
+                <div className="absolute bottom-0 w-8 h-2 bg-black/25 rounded-full blur-xs animate-ping opacity-60" />
+                {/* Physical Pin */}
+                <div className="bg-coffee-primary text-white p-3 rounded-full shadow-lg border-2 border-white relative z-10 animate-bounce">
+                  <MapPin className="h-6 w-6 stroke-[2.5]" />
+                </div>
+              </div>
+            </div>
+
+            {/* Map controls bottom right */}
+            <div className="absolute bottom-4 right-4 flex flex-col gap-2">
+              <button className="bg-white/95 hover:bg-white text-coffee-dark p-2 rounded-xl shadow-md border border-coffee-accent/10 font-bold font-mono text-sm h-10 w-10 flex items-center justify-center transition-colors cursor-pointer">
+                +
+              </button>
+              <button className="bg-white/95 hover:bg-white text-coffee-dark p-2 rounded-xl shadow-md border border-coffee-accent/10 font-bold font-mono text-sm h-10 w-10 flex items-center justify-center transition-colors cursor-pointer">
+                -
+              </button>
+            </div>
+
+            {/* Route link bottom left */}
+            <a
+              href="https://maps.google.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="absolute bottom-4 left-4 bg-coffee-primary hover:bg-coffee-primary/95 text-white font-display font-semibold text-xs px-4 py-2.5 rounded-xl shadow-md border border-white/10 flex items-center gap-2 transition-all duration-300 transform hover:-translate-y-0.5"
+            >
+              <span>Get Directions</span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="h-3.5 w-3.5">
+                <path d="M15 3h6v6" />
+                <path d="M10 14 21 3" />
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
       </div>
     </section>
   );
